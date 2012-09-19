@@ -1,3 +1,6 @@
+[![Build Status](https://secure.travis-ci.org/nathenharvey/ack-cookbook.png)](http://travis-ci.org/nathenharvey/ack-cookbook)
+
+
 Description
 ===========
 
