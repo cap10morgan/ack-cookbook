@@ -3,10 +3,10 @@ maintainer_email "cap10morgan@gmail.com"
 license          "Apache 2.0"
 description      "Installs ack, a utility for quickly performing recursive searches of directory trees of text files (such as source code)."
 long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "1.0.0"
-recipe           "default", "Installs ack"
+version          "1.0.1"
+recipe           "default", "Installs and configures ack"
 
-%w{redhat centos fedora debian ubuntu arch}.each do |os|
+%w{redhat centos fedora debian ubuntu arch gentoo}.each do |os|
   supports os
 end
 
@@ -20,3 +20,13 @@ attribute "ack/symlink_as",
   :description => "What to symlink to /usr/bin/ack-grep on Debian/Ubuntu systems",
   :default => "/usr/local/bin/ack"
 
+attribute "ack/extensions",
+  :display_name => "Extensions",
+  :description => "Additional extensions for ack to respect",
+  :default =>  {
+    'js'   => %w{json coffee ejs},
+    'ruby' => %w{erb},
+    'html' => %w{eco jade jsp slim vm txt},
+    'css'  => %w{styl sass scss},
+    'ruby' => %w{rake feature}
+  }
