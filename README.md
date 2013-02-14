@@ -26,9 +26,8 @@ Attributes
 ```ruby
 {
   'js'   => %w{json coffee ejs},
-  'ruby' => %w{erb},
+  'ruby' => %w{erb rake feature},
   'html' => %w{eco jade jsp slim vm txt},
-  'css'  => %w{styl sass scss},
-  'ruby' => %w{rake feature}
+  'css'  => %w{styl sass scss}
 }
 ```
