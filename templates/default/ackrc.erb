@@ -1,0 +1,5 @@
+<% @extensions.each do |type, exts| %>
+  <% exts.each do |ext| %>
+--type-add=<%= type %>=.<%= ext %>
+  <% end %>
+<% end %>

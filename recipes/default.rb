@@ -1,19 +1,29 @@
 package "ack" do
   case node[:platform]
-  when "centos","redhat","fedora","arch"
+  when "centos", "redhat", "fedora", "arch", "gentoo"
     package_name "ack"
-  when "debian","ubuntu"
+  when "debian", "ubuntu"
     package_name "ack-grep"
   end
   action :install
 end
 
-execute "create symlink" do
-  case node[:platform]
-  when "debian","ubuntu"
-    if !node[:ack][:symlink_as].nil? && node[:ack][:symlink_as].length > 0
-      command "ln -nsf /usr/bin/ack-grep #{node[:ack][:symlink_as]}"
-      creates "#{node[:ack][:symlink_as]}"
-    end
+if node[:ack][:symlink_as] && platform?(%w{debian ubuntu})
+  link node[:ack][:symlink_as] do
+    to "/usr/bin/ack-grep"
   end
+end
+
+template "/etc/ackrc" do
+  source "ackrc.erb"
+  variables node[:ack]
+  mode "0644"
+end
+
+file "/etc/profile.d/ack.sh" do
+  content <<-EOF
+#!/bin/sh
+export ACKRC=/etc/ackrc
+EOF
+  mode "0644"
 end
