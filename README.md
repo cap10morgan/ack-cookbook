@@ -4,6 +4,8 @@ Description
 Installs `ack(1)`, a utility for quickly performing recursive searches of directory
 trees of text files (such as source code).
 
+Visit http://beyondgrep.com/ for more information
+
 On Debian and Ubuntu, it creates a `/usr/local/bin/ack` symlink so that you don't have to type 'ack-grep'.
 
 Requirements
