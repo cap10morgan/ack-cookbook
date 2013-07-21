@@ -26,8 +26,13 @@ Attributes
 ```ruby
 {
   'js'   => %w{json coffee ejs},
-  'ruby' => %w{erb rake feature},
-  'html' => %w{eco jade jsp slim vm txt},
-  'css'  => %w{styl sass scss}
+  'ruby' => %w{erb rake feature rabl ru},
+  'html' => %w{eco jade jsp slim haml vm txt},
+  'css'  => %w{styl sass scss less}
 }
 ```
+
+Credits
+=========
+
+Some code was take from Wes Morgan ack-chef project.
