@@ -21,13 +21,3 @@ attribute "ack/symlink_as",
   :display_name => "Symlink source path and destination bin for RHEL systems",
   :description => "What to symlink to /usr/bin/ack-grep on Debian/Ubuntu systems",
   :default => "/usr/local/bin/ack"
-
-attribute "ack/extensions",
-  :display_name => "Extensions",
-  :description => "Additional extensions for ack to respect",
-  :default =>  {
-    'js'   => %w{json coffee ejs},
-    'ruby' => %w{erb rake feature},
-    'html' => %w{eco jade jsp slim vm txt},
-    'css'  => %w{styl sass scss}
-  }

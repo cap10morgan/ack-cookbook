@@ -1,3 +1,7 @@
+# Version 1.0.3
+ - Ack 2.12
+ - Removed unecessary ackrc
+
 
 # Version 1.0.2
 
