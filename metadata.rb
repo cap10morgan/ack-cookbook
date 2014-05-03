@@ -4,7 +4,7 @@ maintainer_email "cap10morgan@gmail.com"
 license          "Apache 2.0"
 description      "Installs ack, a utility for quickly performing recursive searches of directory trees of text files (such as source code)."
 long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "1.0.1"
+version          "1.0.2"
 recipe           "default", "Installs and configures ack"
 
 %w{redhat centos fedora debian ubuntu arch gentoo}.each do |os|
