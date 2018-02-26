@@ -1,3 +1,5 @@
+**WARNING**: This is 100% unmaintained as I no longer use Chef. If you'd like to take over maintenance, let me know.
+
 # Description
 
 Installs `ack(1)`, a utility for quickly performing recursive searches of directory
